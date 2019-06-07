@@ -9,14 +9,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes } from '@angular/router';
 import {MultiColumnScrollerComponent} from './multicolumnscrolller/multicolumnscroller.component';
+import { CarouselScrollerComponent } from 'src/app/scrollerwithcarousel/scrollerwithcarousel.component';
 const appRoutes: Routes = [
   { path: 'svs', component: SimpleScrollerComponent },
-  {path: 'mvs', component:MultiColumnScrollerComponent}
+  {path: 'mvs', component: MultiColumnScrollerComponent},
+  {
+    path: 'sc', component: CarouselScrollerComponent
+  }
 ];
 
 @NgModule({
   declarations: [
-    AppComponent, SimpleScrollerComponent,MultiColumnScrollerComponent
+    AppComponent, SimpleScrollerComponent, MultiColumnScrollerComponent,CarouselScrollerComponent
   ],
   imports: [
     BrowserAnimationsModule,
