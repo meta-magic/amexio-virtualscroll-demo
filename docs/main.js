@@ -117,6 +117,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 var appRoutes = [
+    { path: '', redirectTo: 'sc', pathMatch: 'full' },
     { path: 'svs', component: _simplescroller_simplescroller_component__WEBPACK_IMPORTED_MODULE_5__["SimpleScrollerComponent"] },
     { path: 'mvs', component: _multicolumnscrolller_multicolumnscroller_component__WEBPACK_IMPORTED_MODULE_8__["MultiColumnScrollerComponent"] },
     {
