@@ -1,34 +1,23 @@
 <amexio-virtual-scroller [window-scroll]="true" *ngIf="localData" [item-size]="150" [data]="localData.items">
     <ng-template #amexioBodyTmpl let-row="row">
-        <amexio-card [header]="false " [footer]="false " [show]="true ">
-
-            <amexio-body>
-                <amexio-row>
-                    <amexio-column [size]="3"></amexio-column>
-                    <amexio-column [size]="2">
-                        <amexio-image [path]="row.imagepath " [height]=" '160px' ">
-                        </amexio-image>
-                    </amexio-column>
-                    <amexio-column [size]="3 ">
-                        <amexio-label [size]="'small-bold' ">
-                            {{row.title}}
-                        </amexio-label>
-
-                        <amexio-image style="padding: 5px " [icon-class]=" 'fas fa-caret-square-right fa-2x' "></amexio-image>
-
-                        <amexio-label size="small ">
-                            {{row.description}}
-                        </amexio-label>
-                        <amexio-label size="small-bold ">
-                            {{row.duration}} secs
-                        </amexio-label>
-                    </amexio-column>
-                    <amexio-column [size]="3"></amexio-column>
-                </amexio-row>
-
-            </amexio-body>
-
-        </amexio-card>
-
+        <amexio-layout-columns [orientation]="'horizontal'">
+            <amexio-layout-item>
+                <amexio-image [path]="row.imagepath " [height]=" '160px' ">
+                </amexio-image>
+            </amexio-layout-item>
+            <amexio-layout-item>
+                <amexio-label [size]="'medium-bold' ">
+                    {{row.title}}
+                </amexio-label>
+                <br />
+                <amexio-label size="small ">
+                    {{row.description}}
+                </amexio-label>
+                <br />
+                <amexio-label size="small-bold ">
+                    {{row.duration}} secs
+                </amexio-label>
+            </amexio-layout-item>
+        </amexio-layout-columns>
     </ng-template>
 </amexio-virtual-scroller>
