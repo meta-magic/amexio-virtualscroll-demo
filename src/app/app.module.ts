@@ -11,6 +11,7 @@ import { Routes } from '@angular/router';
 import {MultiColumnScrollerComponent} from './multicolumnscrolller/multicolumnscroller.component';
 import { CarouselScrollerComponent } from 'src/app/scrollerwithcarousel/scrollerwithcarousel.component';
 const appRoutes: Routes = [
+
   { path: '', redirectTo:'sc', pathMatch:'full' },
   { path: 'svs', component: SimpleScrollerComponent },
   {path: 'mvs', component: MultiColumnScrollerComponent},
